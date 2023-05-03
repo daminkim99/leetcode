@@ -3,9 +3,9 @@
 Given an integer num, repeatedly add all its digits until 
 the result has only one digit, and return it.
 
-P: a number integer 
-R: the only digit remaining after repeatedly summing 
-E: 38 ==> 2 
+a number integer 
+ the only digit remaining after repeatedly summing 
+38 ==> 2 
 
 
 */
