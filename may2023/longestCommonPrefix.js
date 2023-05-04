@@ -27,3 +27,5 @@ var longestCommonPrefix = function(strs) {
 
 console.log(longestCommonPrefix(['flower', 'fuzzy', 'frequent']), "'f'")
 console.log(longestCommonPrefix(['flower','flow','flight']), "'fl'")
+
+console.log("boo")
