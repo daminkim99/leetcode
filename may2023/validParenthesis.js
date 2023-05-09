@@ -17,17 +17,14 @@ return true if the brackets are closed in the same way, false otherwise
 */ 
 
 var isValid = function(s) {
-    //create a search string 
-    let search = "(){}[]"
-    //iterate through a pair in the string to see if exists in the search pair 
-    for(let i=0; i<s.length; i+=2){
-        let substr = s.slice(i,i+2)
-        //if wrong bracket or not a pair, then returns false 
-        if (!search.includes(substr)){
-            return false
-        }
+    //loop through the string until there are no brackets to be replaced 
+    while (
+        s.indexOf("()") !== -1 || s.indexOf("{}") !== -1 || s.indexOf("[]") !== -1
+    ){
+        s = s.replace("()", "").replace("[]","").replace("{}","")
     }
-    return true
+    //return the length of the string, if empty that means that they were all a pair 
+    return !s.length
 };
 
 console.log(isValid("()"), "true")
